@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✦ MY SPACE ✦ — welcome 2 my page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CRT scanline overlay -->
+  <div class="crt-overlay"></div>
+
+  <!-- Pixel cursor decoration -->
+  <div class="pixel-cursor" id="pixelCursor"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="header-blink">★</span>
+      <h1 class="site-title">MY&nbsp;SPACE</h1>
+      <span class="header-blink" style="animation-delay:.5s">★</span>
+    </div>
+    <p class="header-sub">[ YOU ARE VISITOR #<span id="visitorCount">004821</span> ]</p>
+  </header>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner">
+      ✦ WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦ WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <main class="layout">
+
+    <!-- LEFT COLUMN: PROFILE -->
+    <aside class="col-left">
+
+      <!-- PFP Card -->
+      <section class="card pfp-card">
+        <div class="card-title-bar">[ PROFILE.EXE ]</div>
+        <div class="pfp-wrapper">
+          <div class="pfp-frame">
+            <!-- Replace src with your actual profile picture URL -->
+            <img
+              src="IMG/PFP/mio_colored.jpeg"
+              alt="Profile Picture"
+              class="pfp-img"
+              id="pfpImg"
+            />
+            <div class="pfp-pixel-border"></div>
+          </div>
+        </div>
+        <div class="profile-name" id="profileName">IKY</div>
+        <div class="profile-status">
+          <span class="status-dot"></span>
+          <span id="statusText">online and listening to music</span>
+        </div>
+        <div class="profile-bio" id="profileBio">
+          just a earthling.<br/>
+          losing my mind.<br/>
+          🎵 music is my oxygen.
+        </div>
+      </section>
+
+      <!-- Now Playing -->
+      <section class="card nowplaying-card">
+        <div class="card-title-bar">[ NOW PLAYING ]</div>
+        <div class="np-inner">
+          <div class="np-icon">♪</div>
+          <div class="np-info">
+            <div class="np-track" id="npTrack">Shelter</div>
+            <div class="np-artist" id="npArtist">Porter Robinson & Madeon</div>
+          </div>
+        </div>
+        <div class="np-bar-wrap">
+          <div class="np-bar"></div>
+        </div>
+        <!-- Replace href with your Spotify playlist URL -->
+        <a href="https://open.spotify.com/user/ubzghgc8wamyjfcgwnymm21g7?si=a4b1265477924e9d" target="_blank" class="btn-pixel btn-spotify">
+          ♫ VIEW MY PLAYLIST
+        </a>
+      </section>
+
+      <!-- 5 Games to Know Me -->
+      <section class="card games-card">
+        <div class="card-title-bar">[ 5 GAMES 2 KNOW ME ]</div>
+        <ul class="games-list">
+          <li class="game-item">
+            <div class="game-rank">01</div>
+            <div class="game-info">
+              <div class="game-title">Game Title Here</div>
+              <div class="game-genre">genre · platform</div>
+            </div>
+            <div class="game-icon">🕹️</div>
+          </li>
+          <li class="game-item">
+            <div class="game-rank">02</div>
+            <div class="game-info">
+              <div class="game-title">Game Title Here</div>
+              <div class="game-genre">genre · platform</div>
+            </div>
+            <div class="game-icon">🕹️</div>
+          </li>
+          <li class="game-item">
+            <div class="game-rank">03</div>
+            <div class="game-info">
+              <div class="game-title">Game Title Here</div>
+              <div class="game-genre">genre · platform</div>
+            </div>
+            <div class="game-icon">🕹️</div>
+          </li>
+          <li class="game-item">
+            <div class="game-rank">04</div>
+            <div class="game-info">
+              <div class="game-title">Game Title Here</div>
+              <div class="game-genre">genre · platform</div>
+            </div>
+            <div class="game-icon">🕹️</div>
+          </li>
+          <li class="game-item">
+            <div class="game-rank">05</div>
+            <div class="game-info">
+              <div class="game-title">Game Title Here</div>
+              <div class="game-genre">genre · platform</div>
+            </div>
+            <div class="game-icon">🕹️</div>
+          </li>
+        </ul>
+        <div class="games-footer">insert coin to continue ▶</div>
+      </section>
+      
+      <!-- Mood widget -->
+      <section class="card mood-card">
+        <div class="card-title-bar">[ TODAY'S MOOD ]</div>
+        <div class="mood-emoji" id="moodEmoji">🌙</div>
+        <div class="mood-text" id="moodText">nostalgic</div>
+      </section> 
+    </aside>
+
+    <!-- RIGHT COLUMN: CONTENT -->
+    <div class="col-right">
+
+      <!-- About Me -->
+      <section class="card about-card">
+        <div class="card-title-bar">[ ABOUT ME ]</div>
+        <div class="about-content">
+          <p>Hi, it's me and welcome to my own space. 👾</p>
+          <p>i made this page because i like the aesthetic of personal myspace web and everything felt more... personal? btw, this is my digital room & come in, look around, maybe stay a while.</p>
+          <p>i'm obsessed with music, game, anime, and collecting things that have no practical value whatsoever.</p>
+          <div class="pixel-divider">· · ─────── ·𖥸· ─────── · ·</div>
+          <div class="info-grid">
+            <div class="info-row"><span class="info-label">LOCATION</span><span class="info-val">🌏 somewhere on earth</span></div>
+            <div class="info-row"><span class="info-label">AGE</span><span class="info-val">18+</span></div>
+            <div class="info-row"><span class="info-label">STATUS</span><span class="info-val">✦ existing</span></div>
+            <div class="info-row"><span class="info-label">VIBE</span><span class="info-val">❔ confusing myself</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Links -->
+      <section class="card social-card">
+        <div class="card-title-bar">[ FIND ME AT ]</div>
+        <div class="social-grid">
+
+          <a href="https://twitter.com/Asuna9005" target="_blank" class="social-btn social-twitter">
+            <span class="social-icon">𝕏</span>
+            <div class="social-info">
+              <div class="social-name">TWITTER / X</div>
+              <div class="social-handle">@Asuna9005</div>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
+
+          <a href="https://instagram.com/ikydesu_" target="_blank" class="social-btn social-instagram">
+            <span class="social-icon">◈</span>
+            <div class="social-info">
+              <div class="social-name">INSTAGRAM</div>
+              <div class="social-handle">@ikydesu_</div>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
+
+          <a href="https://bsky.app/profile/iky9005.bsky.social" target="_blank" class="social-btn social-bluesky">
+            <span class="social-icon">☁</span>
+            <div class="social-info">
+              <div class="social-name">BLUESKY</div>
+              <div class="social-handle">@iky9005.bsky.social</div>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
+
+          <a href="https://open.spotify.com/user/youruserid" target="_blank" class="social-btn social-spotify">
+            <span class="social-icon">♫</span>
+            <div class="social-info">
+              <div class="social-name">SPOTIFY</div>
+              <div class="social-handle">listen with me</div>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Spotify Playlist Embed -->
+      <section class="card playlist-card">
+        <div class="card-title-bar">[ MY PLAYLIST ]</div>
+        <div class="playlist-embed-wrap">
+          <!-- Replace PLAYLIST_ID with your actual Spotify playlist ID -->
+          <iframe
+            id="spotifyEmbed"
+            src="https://open.spotify.com/embed/playlist/3vXSleEPoPmZd86xJ1IpUj?utm_source=generator&theme=0"
+            width="100%"
+            height="200"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style="border-radius:4px;"
+          ></iframe>
+          <iframe
+            id="spotifyEmbed"
+            src="https://open.spotify.com/embed/playlist/5riPAnv9pNJxRVUwlstLMn?utm_source=generator&theme=0"
+            width="100%"
+            height="200"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style="border-radius:4px;"
+          ></iframe>
+          <iframe
+            id="spotifyEmbed"
+            src="https://open.spotify.com/embed/playlist/5LoPsc58H9G8NJwoQZ93dK?utm_source=generator&theme=0"
+            width="100%"
+            height="200"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style="border-radius:4px;"
+          ></iframe>
+          <iframe
+            id="spotifyEmbed"
+            src="https://open.spotify.com/embed/playlist/2alBtdff4u7EAIho0mrGEI?utm_source=generator&theme=0"
+            width="100%"
+            height="200"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            style="border-radius:4px;"
+          ></iframe>
+        </div>
+        <p class="playlist-note">↑ replace this with your own playlist ID in the HTML</p>
+      </section>
+
+      <!-- My Top 5 -->
+      <section class="card top5-card">
+        <div class="card-title-bar">[ MY TOP 5 TRACKS OF ALL TIME ]</div>
+        <ol class="top5-list" id="top5List">
+          <li><span class="rank">01</span><span class="track-title">Shelter</span><span class="track-art">Porter Robinson ft. Madeon</span></li>
+          <li><span class="rank">02</span><span class="track-title">Teardrops</span><span class="track-art">Bring Me the Horizon</span></li>
+          <li><span class="rank">03</span><span class="track-title">Whisper of a Dream</span><span class="track-art">Holding Absence</span></li>
+          <li><span class="rank">04</span><span class="track-title">Without Me</span><span class="track-art">Dayseeker</span></li>
+          <li><span class="rank">05</span><span class="track-title">Mighty Long Fall</span><span class="track-art">ONE OK ROCK</span></li>
+        </ol>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-pixel">████████████████████████████████</span>
+      <p>made with ♥ + html · css · js · no frameworks needed</p>
+      <p>best viewed at 1024×768 · IE NOT supported lol</p>
+      <span class="footer-pixel">████████████████████████████████</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
