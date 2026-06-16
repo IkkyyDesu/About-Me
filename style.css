@@ -393,17 +393,17 @@ body {
   gap: 0;
 }
 
-.games-list a {
+.games-list a { 
   text-decoration: none;
 }
 
-.game-item {
+.game-item { 
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 4px;
   border-bottom: 1px dashed var(--gray-mid);
-  cursor: default;
+  cursor: pointer;
   transition: none;
   position: relative;
 }
@@ -655,15 +655,47 @@ body {
 }
 
 .top5-list li {
+  position: relative;
+}
+
+.top5-list li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  pointer-events: none;
+}
+
+.top5-list li:hover::before {
+  background: rgba(255,255,255,0.04);
+}
+
+.top5-list li:hover .rank {
+  color: var(--white);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+.top5-list li:hover .track-icon {
+  animation: trackIconBounce 0.4s steps(2) infinite;
+}
+
+@keyframes trackIconBounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+.top5-list a {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
+  padding: 8px 4px;
   border-bottom: 1px dashed var(--gray-mid);
   font-size: 10px;
 }
 
-.top5-list li:last-child { border-bottom: none; }
+.top5-list li:last-child a { border-bottom: none; }
 
 .rank {
   font-family: var(--font-pixel);
