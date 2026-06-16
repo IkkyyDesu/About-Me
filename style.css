@@ -393,6 +393,10 @@ body {
   gap: 0;
 }
 
+.games-list a {
+  text-decoration: none;
+}
+
 .game-item {
   display: flex;
   align-items: center;
