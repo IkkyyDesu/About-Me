@@ -68,25 +68,26 @@ setTimeout(typeStatus, 2000);
 
 /* ── MOOD ROTATOR ── */
 const moods = [
-  { emoji: '🌙', text: 'nostalgic' },
-  { emoji: '🎵', text: 'musical'  },
-  { emoji: '☕', text: 'cozy'     },
-  { emoji: '🌧️', text: 'melancholy' },
-  { emoji: '✨', text: 'dreamy'   },
-  { emoji: '🦋', text: 'free'     },
-  { emoji: '🌊', text: 'chill'    },
+  { emoji: '(´-ω-`)',        text: 'sleepy' },           // 0
+  { emoji: '(っ˘ڡ˘ς)',       text: 'hungry' },           // 1
+  { emoji: '(*´∀`)~♥',       text: 'in love with music'},// 2
+  { emoji: '(ง •̀_•́)ง',     text: 'determined' },       // 3
+  { emoji: '(´∩｀。)',         text: 'a little sad' },     // 4
+  { emoji: '( ´ ▽ ` )ﾉ',    text: 'happy' },            // 5
+  { emoji: '(´-ω-`)zzz',     text: 'exhausted' },        // 6
+  { emoji: '(￣▽￣)ノ',       text: 'just vibing' },      // 7 
+  { emoji: '( ˘ ³˘)♥🕹️',    text: 'flirting with games'},// 8  ← tambah ini
 ];
 
 function setMoodByHour() {
   const hour = new Date().getHours();
   const idx  = hour % moods.length;
   const mood = moods[idx];
-  const emojiEl = document.getElementById('moodEmoji');
+  const emojiEl = document.getElementById('moodEmoji'); // ← tambah ini
   const textEl  = document.getElementById('moodText');
   if (emojiEl) emojiEl.textContent = mood.emoji;
   if (textEl)  textEl.textContent  = mood.text;
 }
-
 setMoodByHour();
 
 /* ── PIXEL GLITCH on title hover ── */

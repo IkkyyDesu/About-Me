@@ -364,10 +364,14 @@ body {
 }
 
 .mood-emoji {
-  font-size: 36px;
+  font-size: 13px;          
+  font-family: var(--font-mono);
   display: block;
-  padding: 12px;
+  padding: 16px 12px 10px;
   animation: floatMood 3s ease-in-out infinite;
+  letter-spacing: 0.05em;
+  color: var(--gray-silver);
+  line-height: 1.6;
 }
 
 @keyframes floatMood {
@@ -482,7 +486,7 @@ body {
 .games-footer {
   font-family: var(--font-pixel);
   font-size: 6px;
-  color: var(--gray-mid);
+  color: var(--white-mid);
   text-align: center;
   padding: 6px 8px 8px;
   letter-spacing: 0.1em;
