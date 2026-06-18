@@ -160,6 +160,62 @@ document.getElementById('modal-overlay').addEventListener('click', function(e) {
   document.addEventListener('mouseup', () => { dragging = false; });
 })();
 
+/* ===== DYNAMIC MOOD BUILDER ===== */
+function updateMood() {
+  const moodSpan = document.getElementById('current-mood');
+  if (!moodSpan) return;
+
+  const currentHour = new Date().getHours();
+  let moodText = "";
+
+  // Logika pembagian waktu (menggunakan format 24 jam)
+  if (currentHour >= 0 && currentHour < 5) {
+    // 00:00 - 04:59
+    moodText = "deep sleep (￣o￣) . z Z"; 
+  } else if (currentHour >= 5 && currentHour < 8) {
+    // 05:00 - 07:59
+    moodText = "woke up (｡-_-｡)"; 
+  } else if (currentHour >= 8 && currentHour < 12) {
+    // 08:00 - 11:59
+    moodText = "IRL grinding (ง •̀_•́)ง"; 
+  } else if (currentHour >= 12 && currentHour < 13) {
+    // 12:00 - 12:59 (Waktu tambahan)
+    moodText = "lunch break (っ˘ڡ˘ς)"; 
+  } else if (currentHour >= 13 && currentHour < 17) {
+    // 13:00 - 16:59
+    moodText = "chilling ( ¯꒳¯ )"; 
+  } else if (currentHour >= 17 && currentHour < 20) {
+    // 17:00 - 19:59
+    moodText = "dinner time (っˆڡˆς)"; 
+  } else if (currentHour >= 20 && currentHour < 23) {
+    // 20:00 - 22:59
+    moodText = "otaku time (☆ω☆)"; 
+  } else {
+    // 23:00 - 23:59 (Waktu tambahan)
+    moodText = "doom scrolling (눈_눈)"; 
+  }
+
+  moodSpan.textContent = moodText;
+}
+
+// ===== MASCOT INTERACTION =====
+document.addEventListener('DOMContentLoaded', () => {
+  const mascotImg = document.getElementById('mascot-img');
+  const speechBubble = document.getElementById('speech-bubble');
+
+  if (mascotImg && speechBubble) {
+    mascotImg.addEventListener('click', () => {
+      // Memunculkan speech bubble
+      speechBubble.classList.add('show');
+      
+      // Teks otomatis hilang lagi setelah 3 detik (3000 milidetik)
+      setTimeout(() => {
+        speechBubble.classList.remove('show');
+      }, 3000);
+    });
+  }
+});
+
 /* ===== INIT ===== */
 buildCity();
 buildStars();

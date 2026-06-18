@@ -75,7 +75,7 @@
           otaku for live ✦ professional headbanger ✦ roguelike survivor
         </div>
         <div class="profile-stats">
-          <div class="stat-item">MOOD: <span>( ˶ˆᗜˆ˵ )</span></div>
+          <div class="stat-item">MOOD: <span id="current-mood">( ˶ˆᗜˆ˵ )</span></div>
           <div class="stat-item">STATUS: <span>✦ CAFFEINATED</span></div>
           <div class="stat-item">LVL: <span>99</span></div>
         </div>
@@ -115,7 +115,7 @@
             </li>
             <li>
               <a href="https://bsky.app/profile/iky9005.bsky.social" target="_blank" rel="noopener">
-                <span class="social-icon">🦋</span>
+                <span class="social-icon">☁️</span>
                 bluesky
               </a>
             </li>
@@ -140,9 +140,9 @@
             <span class="tag">MUSIC</span>
           </div>
         </div>
-      </div>
-
-      <!-- STATUS BOX -->
+      </div> 
+      
+       <!-- STATUS BOX -->
       <div class="pixel-panel">
         <div class="panel-title-bar">
           <span>SYSTEM.LOG</span>
@@ -164,8 +164,23 @@
             &gt; [█████████░] 93%
           </div>
         </div>
-      </div>
+      </div> 
 
+      <!-- GIF BOX -->
+      <div class="pixel-panel">
+        <div class="panel-title-bar">
+          <span>VISUAL.EXE</span>
+          <div class="title-bar-dots">
+            <div class="title-bar-dot dot-red"></div>
+            <div class="title-bar-dot dot-yellow"></div>
+            <div class="title-bar-dot dot-green"></div>
+          </div>
+        </div>
+        <div class="panel-content gif-container">
+          <!-- Ganti URL di bawah dengan link GIF milikmu -->
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Rmb2VpOTM4aXhncTNxN2YybHhjc2g0OW91bHZlNG1oeXFnOTRhayZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/kQKOG7ZORzHulCUBvj/giphy.gif" alt="Pixel Art GIF" class="panel-gif">
+        </div>
+      </div>
     </div>
 
     <!-- MAIN COLUMN -->
@@ -200,9 +215,10 @@
         </div>
       </div>
 
-      <div class="pixel-panel">
+            <!-- 5 GAMES 2 KNOW ME --> 
+        <div class="pixel-panel">
         <div class="panel-title-bar">
-          <span>MY_GAMES.EXE</span>
+          <span>FAV_GAMES.EXE</span>
           <div class="title-bar-dots">
             <div class="title-bar-dot dot-red"></div>
             <div class="title-bar-dot dot-yellow"></div>
@@ -218,22 +234,63 @@
             </li>
             <li>
               <a href="https://www.minecraft.net/" target="_blank" rel="noopener">
-                <span class="social-icon">⛏️</span> Minecraft
+                <span class="social-icon">🚀</span> Minecraft
               </a>
             </li>
             <li>
               <a href="https://store.steampowered.com/app/17470/Dead_Space_2008/" target="_blank" rel="noopener">
-                <span class="social-icon">🚀</span> Dead Space (2008)
+                <span class="social-icon">⛏️</span> Dead Space (2008)
               </a>
             </li>
             <li>
               <a href="https://store.steampowered.com/app/632360/Risk_of_Rain_2/" target="_blank" rel="noopener">
-                <span class="social-icon">🌧️</span> Risk of Rain 2
+                <span class="social-icon">⛈️</span> Risk of Rain 2
               </a>
             </li>
             <li>
               <a href="https://store.steampowered.com/app/588650/Dead_Cells/" target="_blank" rel="noopener">
-                <span class="social-icon">🔥</span> Dead Cells
+                <span class="social-icon">☠️</span> Dead Cells
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TRACKS -->
+      <div class="pixel-panel">
+        <div class="panel-title-bar">
+          <span>FAV_ARTIST.EXE</span>
+          <div class="title-bar-dots">
+            <div class="title-bar-dot dot-red"></div>
+            <div class="title-bar-dot dot-yellow"></div>
+            <div class="title-bar-dot dot-green"></div>
+          </div>
+        </div>
+        <div class="panel-content">
+          <ul class="social-list">
+            <li>
+              <a href="https://www.youtube.com/@porterrobinson" target="_blank" rel="noopener">
+                <span class="social-icon">🌐</span> porter robinson
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@itsmadeon" target="_blank" rel="noopener">
+                <span class="social-icon">🕹️</span> madeon
+              </a>
+            </li> 
+            <li>
+              <a href="https://www.youtube.com/@LinkinPark" target="_blank" rel="noopener"> 
+                <span class="social-icon">🖤</span> linkin park
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@BringMeTheHorizon" target="_blank" rel="noopener">
+                <span class="social-icon">💀</span> bring me the horizon
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@ONEOKROCK" target="_blank" rel="noopener">
+                <span class="social-icon">⛩️</span> one ok rock
               </a>
             </li>
           </ul>
@@ -300,10 +357,10 @@
   <!-- FOOTER -->
   <footer>
     <div style="margin-bottom:8px;">
-      ✦ — made with ♥ and too much caffeine — ✦
+      ✦ — made with ♥ and too much redbull — ✦
     </div>
     <div>
-      best viewed at 1024x768 · IE6 not supported · <span style="color:var(--text-secondary)">frames on</span>
+      · best viewed at 1024x768 ·
     </div>
   </footer>
 
@@ -331,6 +388,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- ===== MASCOT ===== -->
+<div id="mascot-container">
+  <div id="speech-bubble">hey pookie.</div>
+  <img id="mascot-img" src="IMG/gif/tsuny.gif" alt="Mascot">
 </div>
 
 <script src="script.js"></script>

@@ -162,31 +162,6 @@ body {
   transition: background 0.8s;
 }
 
-/* Road */
-.road {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: var(--road);
-  transition: background 0.8s;
-}
-
-.road-line {
-  position: absolute;
-  top: 50%;
-  height: 4px;
-  background: #FFE566;
-  transform: translateY(-50%);
-  animation: roadLines 1.5s linear infinite;
-}
-
-@keyframes roadLines {
-  from { transform: translateY(-50%) translateX(0); }
-  to { transform: translateY(-50%) translateX(-80px); }
-}
-
 /* City buildings */
 .city-layer {
   position: absolute;
@@ -316,6 +291,24 @@ body {
 
 .panel-content {
   padding: 14px 16px;
+}
+
+/* ===== GIF PANEL ===== */
+.gif-container {
+  padding: 10px; /* Sedikit ruang agar GIF tidak langsung menempel ke border dalam */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-gif {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--panel-border); /* Memberikan bingkai warna neon di sekitar GIF */
+  display: block;
+  /* Hapus atau ubah 'pixelated' jika kamu pakai GIF biasa (bukan pixel art) agar tidak blur/pecah */
+  image-rendering: pixelated; 
 }
 
 /* ===== HEADER ===== */
@@ -528,7 +521,7 @@ body {
 /* ===== PLAYLIST ===== */
 .playlist-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
@@ -787,6 +780,75 @@ body {
 
 [data-theme="dark"] .pixel-btn {
   color: #0A0A1A;
+}
+
+/* ===== MASCOT STYLES ===== */
+#mascot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mascot-img {
+  width: 100px; /* Ubah ukuran maskot di sini */
+  height: auto;
+  cursor: pointer;
+  image-rendering: pixelated; /* Menjaga gambar 8-bit tetap tajam */
+  transition: transform 0.2s ease-in-out;
+}
+
+#mascot-img:hover {
+  transform: scale(1.1); /* Efek membesar sedikit saat disentuh kursor */
+}
+
+#speech-bubble {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #ffffff;
+  color: #00F5FF;
+  border: 2px solid #FF2BD6;
+  padding: 8px 12px;
+  border-radius: 0; /* Sengaja dibuat kotak agar terasa retro */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 100%;
+  white-space: nowrap;
+  box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Membuat segitiga kecil di bawah speech bubble */
+#speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #FF2BD6 transparent transparent transparent;
+}
+
+/* Class untuk memunculkan teks */
+#speech-bubble.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mode Gelap (Opsional, sesuaikan dengan variabel dark mode-mu jika ada) */
+[data-theme="dark"] #speech-bubble {
+  background-color: rgba(15, 0, 35, 0.92);
+  color: #00F5FF; /* Warna teks ala terminal */
+  border-color: #FF2BD6;
+}
+[data-theme="dark"] #speech-bubble::after {
+  border-color: #FF2BD6 transparent transparent transparent;
 }
 
 /* ===== FOOTER ===== */
